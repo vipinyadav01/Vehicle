@@ -1,0 +1,48 @@
+<h1 class="mb-4">Add New Vehicle</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <form action="/vehicles" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Vehicle Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="brand" class="form-label">Brand</label>
+                        <input type="text" class="form-control" id="brand" name="brand" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="price" name="price" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Vehicle Image</label>
+                        <input type="file" class="form-control" id="image" name="image" required>
+                        <small class="text-muted">Upload an image of the vehicle (jpeg, jpg, png, gif only)</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="/vehicles" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Add Vehicle Instructions</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">All fields are required</li>
+                    <li class="list-group-item">Upload clear images only</li>
+                    <li class="list-group-item">Provide detailed description</li>
+                    <li class="list-group-item">Enter accurate price information</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

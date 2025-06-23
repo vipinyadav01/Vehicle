@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Log files
+logs/
+*.log
+npm-debug.log*
+
+# Uploaded files
+public/uploads/*
+!public/uploads/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
+
+# Mac files
+.DS_Store

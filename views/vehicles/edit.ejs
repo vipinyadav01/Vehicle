@@ -1,0 +1,39 @@
+<h1 class="mb-4">Edit Vehicle: <%= vehicle.name %></h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <form action="/vehicles/<%= vehicle._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Vehicle Name</label>
+                        <input type="text" class="form-control" id="name" name="name" value="<%= vehicle.name %>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="brand" class="form-label">Brand</label>
+                        <input type="text" class="form-control" id="brand" name="brand" value="<%= vehicle.brand %>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="price" name="price" value="<%= vehicle.price %>" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Vehicle Image</label>
+                        <input type="file" class="form-control" id="image" name="image">
+                        <small class="text-muted">Leave empty to keep current image</small>
+                        <div class="mt-2">
+                            <p>Current Image:</p>
+                            <img src="<%= vehicle.image %>" alt="<%= vehicle.name %>" style="max-width: 200px;" class="img-thumbnail">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="5" required><%= vehicle.description %></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <a href="/vehicles/<%= vehicle._id %>" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
